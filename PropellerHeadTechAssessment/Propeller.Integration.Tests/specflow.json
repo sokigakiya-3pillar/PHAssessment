@@ -1,0 +1,15 @@
+{
+    "$schema": "https://specflow.org/specflow-config.json",
+
+    "BASEAPIURL": "localhost:7270",
+    "HTTPTYPE": "https://",
+    "Auth": {
+        "AdminUserName": "admin.en@mail.com",
+        "AdminPassword": "s3cUrE.p4s5W0Rd.1",
+        "PowerUserName": "power.en@mail.com",
+        "PowerPassword": "s3cUrE.p4s5W0Rd.2",
+        "RegularUserName": "user.en@mail.com",
+        "RegularPassword": "s3cUrE.p4s5W0Rd.3"
+    }
+
+}

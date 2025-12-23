@@ -1,0 +1,1350 @@
+{
+	"info": {
+		"_postman_id": "69438d42-22d1-42de-88ee-f25aab3684eb",
+		"name": "PropellerH",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6805619"
+	},
+	"item": [
+		{
+			"name": "Notes",
+			"item": [
+				{
+					"name": "RetrieveCustomerNotes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{UserBearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:{{PortNumber}}/api/notes/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PortNumber}}",
+							"path": [
+								"api",
+								"notes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddCustomerNote",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{AdminBearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "noteText",
+									"value": "New Text",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:{{PortNumber}}/api/notes/Ng==",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PortNumber}}",
+							"path": [
+								"api",
+								"notes",
+								"Ng=="
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCustomerNote",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{AdminBearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:{{PortNumber}}/api/notes/MQ==/9",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PortNumber}}",
+							"path": [
+								"api",
+								"notes",
+								"MQ==",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCustomerNote",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{AdminBearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "noteText",
+									"value": "New Value Ed",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:{{PortNumber}}/api/notes/1/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PortNumber}}",
+							"path": [
+								"api",
+								"notes",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contacts",
+			"item": [
+				{
+					"name": "NewContactWithCustomer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{AdminBearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Soki\",\r\n  \"lastName\": \"Gakiya\",\r\n  \"email\": \"yami.soki@gmail.com\",\r\n  \"phone\": \"6671438677\",\r\n  \"customerID\": \"Mg==\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:{{PortNumber}}/api/contacts",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PortNumber}}",
+							"path": [
+								"api",
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateContact",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{AdminBearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Soki Ed\",\r\n  \"lastName\": \"Gakiya\",\r\n  \"email\": \"yami.soki@gmail.com\",\r\n  \"phone\": \"6671438677\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:{{PortNumber}}/api/contacts/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PortNumber}}",
+							"path": [
+								"api",
+								"contacts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RetrieveCustomerContacts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{UserBearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:{{PortNumber}}/api/contacts/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PortNumber}}",
+							"path": [
+								"api",
+								"contacts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NewContactWithoutCustomer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{AdminBearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Soki2\",\r\n  \"lastName\": \"Gakiya\",\r\n  \"email\": \"yami.soki@gmail.com\",\r\n  \"phone\": \"6671438677\",\r\n  \"customerID\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:{{PortNumber}}/api/contacts",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PortNumber}}",
+							"path": [
+								"api",
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RetrieveContactsBySearch",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{UserBearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:{{PortNumber}}/api/contacts",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PortNumber}}",
+							"path": [
+								"api",
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteContact",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{AdminBearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:{{PortNumber}}/api/contacts/3?fd=y",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PortNumber}}",
+							"path": [
+								"api",
+								"contacts",
+								"3"
+							],
+							"query": [
+								{
+									"key": "fd",
+									"value": "y"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RetrieveContact",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{UserBearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:{{PortNumber}}/api/contacts/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PortNumber}}",
+							"path": [
+								"api",
+								"contacts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TryTo-CreateNewContactNoEmailOrPhone",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Soki\",\r\n  \"lastName\": \"Gakiya\",\r\n  \"email\": \"\",\r\n  \"phone\": \"\",\r\n  \"customerID\": \"Mg==\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:{{PortNumber}}/api/contacts",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PortNumber}}",
+							"path": [
+								"api",
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TryTo-AddContactToNonExistingCustomer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{UserBearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Soki\",\r\n  \"lastName\": \"Gakiya\",\r\n  \"email\": \"soki.gakiya@outlook.com\",\r\n  \"phone\": \"+52 1 6671438677\",\r\n  \"customerID\": \"MA==\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:{{PortNumber}}/api/contacts",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PortNumber}}",
+							"path": [
+								"api",
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TryTo-CreateNewContactWithNoName",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{UserBearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"\",\r\n  \"lastName\": \"Gakiya\",\r\n  \"email\": \"soki.gakiya@outlook.com\",\r\n  \"phone\": \"+52 1 6671438677\",\r\n  \"customerID\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:{{PortNumber}}/api/contacts",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PortNumber}}",
+							"path": [
+								"api",
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "EnglishUser",
+					"item": [
+						{
+							"name": "AuthenticateEnglishAdminUser",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"uid\": \"admin.en@mail.com\",\r\n  \"pwd\": \"s3cUrE.p4s5W0Rd.1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:{{PortNumber}}/api/auth/authenticate",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "{{PortNumber}}",
+									"path": [
+										"api",
+										"auth",
+										"authenticate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AuthenticateEnglishPowerUser",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"uid\": \"power.en@mail.com\",\r\n  \"pwd\": \"s3cUrE.p4s5W0Rd.2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:{{PortNumber}}/api/auth/authenticate",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "{{PortNumber}}",
+									"path": [
+										"api",
+										"auth",
+										"authenticate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AuthenticateEnglishRegularUser",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"uid\": \"user.en@mail.com\",\r\n  \"pwd\": \"s3cUrE.p4s5W0Rd.3\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:{{PortNumber}}/api/auth/authenticate",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "{{PortNumber}}",
+									"path": [
+										"api",
+										"auth",
+										"authenticate"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "SpanishUser",
+					"item": [
+						{
+							"name": "AuthenticateSpanishAdminUser",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"uid\": \"admin.es@mail.com\",\r\n  \"pwd\": \"s3cUrE.p4s5W0Rd.1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:{{PortNumber}}/api/auth/authenticate",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "{{PortNumber}}",
+									"path": [
+										"api",
+										"auth",
+										"authenticate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AuthenticateSpanishPowerUser",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"uid\": \"power.es@mail.com\",\r\n  \"pwd\": \"s3cUrE.p4s5W0Rd.2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:{{PortNumber}}/api/auth/authenticate",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "{{PortNumber}}",
+									"path": [
+										"api",
+										"auth",
+										"authenticate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AuthenticateSpanishRegularUser",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"uid\": \"user.es@mail.com\",\r\n  \"pwd\": \"s3cUrE.p4s5W0Rd.3\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:{{PortNumber}}/api/auth/authenticate",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "{{PortNumber}}",
+									"path": [
+										"api",
+										"auth",
+										"authenticate"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "FrenchUser",
+					"item": [
+						{
+							"name": "AuthenticateFrenchAdminUser",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"uid\": \"admin.fr@mail.com\",\r\n  \"pwd\": \"s3cUrE.p4s5W0Rd.1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:{{PortNumber}}/api/auth/authenticate",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "{{PortNumber}}",
+									"path": [
+										"api",
+										"auth",
+										"authenticate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AuthenticateFrenchPowerUser",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"uid\": \"power.fr@mail.com\",\r\n  \"pwd\": \"s3cUrE.p4s5W0Rd.2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:{{PortNumber}}/api/auth/authenticate",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "{{PortNumber}}",
+									"path": [
+										"api",
+										"auth",
+										"authenticate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AuthenticateFrenchRegularUser",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"uid\": \"user.fr@mail.com\",\r\n  \"pwd\": \"s3cUrE.p4s5W0Rd.3\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:{{PortNumber}}/api/auth/authenticate",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "{{PortNumber}}",
+									"path": [
+										"api",
+										"auth",
+										"authenticate"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Customers",
+			"item": [
+				{
+					"name": "CreateNewCustomer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{AdminBearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"New Customer 4\",\r\n  \"Status\": \"MQ==\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:{{PortNumber}}/api/customers",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PortNumber}}",
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateNewCustomerWithContact",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{AdminBearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:{{PortNumber}}/api/customers",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PortNumber}}",
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChageCustomerStatus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{AdminBearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7270/api/customers/MjA=/status/Mg==",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7270",
+							"path": [
+								"api",
+								"customers",
+								"MjA=",
+								"status",
+								"Mg=="
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RetrieveAllCustomers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{UserBearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ5YW1pLnNva2lAZ21haWwuY29tIiwicHJvZmlsZSI6Ijk5IiwibmJmIjoxNjY5Nzg1MTc0LCJleHAiOjE2Njk4NzE1NzQsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0IiwiYXVkIjoiYXBpIn0.JK5XJDpw7fcFSGSf1NR7KK4ONINZ3CyKV-v2-QJUyqY",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://localhost:{{PortNumber}}/api/customers?ps=500&pn=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PortNumber}}",
+							"path": [
+								"api",
+								"customers"
+							],
+							"query": [
+								{
+									"key": "ps",
+									"value": "500"
+								},
+								{
+									"key": "pn",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RetrieveSingleCustomer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{AdminBearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:{{PortNumber}}/api/customers/Mg==",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PortNumber}}",
+							"path": [
+								"api",
+								"customers",
+								"Mg=="
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCustomer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{AdminBearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"New Customer Edited\",\r\n  \"Status\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:{{PortNumber}}/api/customers/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PortNumber}}",
+							"path": [
+								"api",
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PartialUpdateCustomer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{AdminBearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"op\": \"replace\",\r\n        \"path\": \"/name\",\r\n        \"value\": \"New Name\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:{{PortNumber}}/api/customers/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PortNumber}}",
+							"path": [
+								"api",
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RetrieveFilteredCustomers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{UserBearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:{{PortNumber}}/api/customers?q=new",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PortNumber}}",
+							"path": [
+								"api",
+								"customers"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "new"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCustomerNoForceDelete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{AdminBearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:{{PortNumber}}/api/customers/MTM=?fd=y",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PortNumber}}",
+							"path": [
+								"api",
+								"customers",
+								"MTM="
+							],
+							"query": [
+								{
+									"key": "fd",
+									"value": "y"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchCustomers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{AdminBearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:{{PortNumber}}/api/customers?ps=500&pn=1&d=d",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PortNumber}}",
+							"path": [
+								"api",
+								"customers"
+							],
+							"query": [
+								{
+									"key": "ps",
+									"value": "500"
+								},
+								{
+									"key": "pn",
+									"value": "1"
+								},
+								{
+									"key": "d",
+									"value": "d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchCustomers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{AdminBearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CustomerStatuses",
+			"item": [
+				{
+					"name": "RetrieveCustomerStatuses",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{AdminBearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:{{PortNumber}}/api/status",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{PortNumber}}",
+							"path": [
+								"api",
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Countries",
+			"item": [
+				{
+					"name": "RetrieveAllCountries",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{AdminBearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fr-FR",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7270/api/countries",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7270",
+							"path": [
+								"api",
+								"countries"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "PortNumber",
+			"value": "7270",
+			"type": "string"
+		},
+		{
+			"key": "AdminBearerToken",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBZG1pbmlzdHJhZG9yIE3DqXhpY28iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImxvY2FsZSI6ImVzLU1YIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvY291bnRyeSI6Ik1FWCIsIm5iZiI6MTY3MDA4MzYyMCwiZXhwIjoxNjcwMTcwMDIwLCJpc3MiOiJodHRwczovL2xvY2FsaG9zdCIsImF1ZCI6ImFwaSJ9.Gy0BpOUWughiLQurkuB5SvrT9ExytXqK59DUTpxMU94",
+			"type": "string"
+		},
+		{
+			"key": "UserBearerToken",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJSZWd1bGFyIFVzZXIiLCJwcm9maWxlIjoiMSIsIm5iZiI6MTY2OTk1MzUxMywiZXhwIjoxNjcwMDM5OTEzLCJpc3MiOiJodHRwczovL2xvY2FsaG9zdCIsImF1ZCI6ImFwaSJ9.6O1ISpS1ZUeiFx7NFT47zA3wOmZxRYWixpVhY5TNaSs",
+			"type": "string"
+		}
+	]
+}
